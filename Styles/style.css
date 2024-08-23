@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat&display=swap');
+
+:root{
+    --color-primario:#c5cfd1;
+    --color-secundario:#327aaa;
+    --color-terciario:#1A4870;
+    --color-hover:#1F316F;
+
+    --fuente-monserrat:'Montserrat', sans-serif;
+    --fuente-krona-one:'Krona One', serif;
+}
+
+
+* {
+    padding: 0;
+    margin:0;
+}
+
+body{
+    /* height: 100vh; */
+    box-sizing: border-box;
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+}
+
+.header{
+    padding: 2% 0% 0% 15%;
+}
+
+.header__menu {
+    display: flex;
+    gap: 80px;
+/*    justify-content: center;
+    align-items: center;*/
+}
+
+.header__menu__link {
+    font-family: var(--fuente-monserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-terciario);
+    /*margin: 0 10px;
+    padding: 5px 10px;*/
+    text-decoration: none;
+    /*2rem equivalen a 32 px*
+     24px: divide por 16 (base para 1rem) para obtener 1.5rem
+    6pixes = 1rem
+    8pixeles= 0.5rem*/
+}
+
+.header__menu__link:hover {
+    color: #007bff;
+}
+
+
+
+.presentacion {
+    /* margin: 10% 15%; /* agrega un margen para centrar los cuadrados en la pantalla */
+    padding: 8% 15%;
+    display: flex; /* coloca los cuadrados uno al lado del otro */
+    align-items: center; /* alinea los items: de manena central */
+    justify-content: space-between; /*reparte el espacio sobrante del contenedor de manera equitativa entre ellos*/
+    gap: 82px;
+}
+
+.presentacion__contenido{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;/* agrega espacios iguales entre cada cuadrado */
+}
+
+.presentacion__contenido__titulo{
+    font-size: 2.25rem;
+    font-family: var(--fuente-krona-one);
+}
+
+.titulo-destaque {
+    color: var(--color-terciario) ;
+}
+
+.presentacion__contenido__texto{
+    font-size: 1.5rem;
+    font-family: var(--fuente-monserrat);
+}
+
+.presentacion_enlaces{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column; /* define que la dirección del display: flex debe ser en "columna" para que los cuadrados se posicionen verticalmente*/
+    align-items: center;
+}
+
+.presentacion_enlaces_subtitulo{
+    font-family: var(--fuente-krona-one);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.presentacion_enlaces_link{
+    /* background-color: #22D4FD; */ /* Código comentado */
+    width: 50%;
+    text-align: center;
+    padding: 21.5px 0;
+    border-radius: 8px;
+    font-family: var(--fuente-monserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-secundario);
+    border: 2px solid var(--color-terciario);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+/*
+section{    
+border-style: solid;    /*Crea un borde sólido */
+ /*    border-color: red;   /*Colorea el borde con el color rojo*/
+ /*    margin: 10%;    /* Agrega un margen alrededor de la section */
+ /*    display: flex;  /* Agrega el display flex */
+/*     } */
+
+/* justify-content: space-evenly: los elementos se distribuyen con espacios iguales entre sí y hasta los bordes.*/
+/* justify-content: space-around :  los elementos se distribuirán con un espacio alrededor de cada uno.*/
+/*justify-content: center:  elementos se centrarán en su elemento padre, pero sin espacios entre sí.*/
+
+.presentacion_enlaces_link:hover{
+    background-color: var(--color-hover);
+    cursor: pointer;
+}
+
+.presentacion_imagen{
+    width: 50%;
+    height: 40%;
+    max-width: 700px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.footer{
+    background-color: var(--color-terciario);
+    padding: 1.5rem;
+    align-items: center;
+    color: var(--color-primario);
+    font-family: var(--fuente-monserrat);
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+/*media query*/
+@media (max-width: 1200px){
+
+    .header{
+        padding: 10%;
+    }
+
+    .header__menu{
+        justify-content: center;
+    }
+    .presentacion{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .presentacion__contenido{
+        width: auto;
+        height: auto;
+    }
+}
